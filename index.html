@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 231 - Web Frontend Development course home page for Nuno Silva Ferreira">
+    <meta name="author" content="Nuno Silva Ferreira">
+    <title>WDD 231 | Nuno Silva Ferreira</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/profile.jpg" alt="Nuno Silva Ferreira">
+        <span>Nuno Silva Ferreira</span>
+    </header>
+    <nav>
+        <button id="menu-button" aria-label="Menu"></button>
+        <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Final</a></li>
+            <li><a href="https://github.com/nunosilvaferreira" target="_blank">GitHub Profile</a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Home</h1>
+        
+        <section>
+            <h2>About Me</h2>
+            <p>Welcome to my WDD 231 course page. I'm Nuno Silva Ferreira from Porto, Portugal.</p>
+            <p>Porto is a coastal city in northwest Portugal known for its stately bridges. Livraria Lello, one of the most beautiful bookstores in the world. Many believe J.K. Rowling was inspired by its staircase when creating Flourish and Blotts in Harry Potter.</p>
+            <img src="images/lello-library-in-porto.jpg" alt="Lello Lybrary" width="300">
+        </section>
+        
+        <section>
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="filter-buttons">
+                <button id="all-courses">All Courses</button>
+                <button id="wdd-courses">WDD Courses</button>
+                <button id="cse-courses">CSE Courses</button>
+            </div>
+            <p>The total number of courses listed below is <span id="course-count">0</span></p>
+            <div id="course-cards"></div>
+        </section>
+        
+        <section>
+            <h2>Resources</h2>
+            <ul>
+                <li><a href="https://byui.instructure.com/" target="_blank">Canvas</a></li>
+                <li><a href="https://byui-cse.github.io/wdd230-ww-course/" target="_blank">Course Materials</a></li>
+                <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="current-year"></span> | Nuno Silva Ferreira | Lisbon, Portugal</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

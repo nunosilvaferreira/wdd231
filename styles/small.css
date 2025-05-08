@@ -1,0 +1,198 @@
+/* Base styles for all screens */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --completed-color: #27ae60;
+    --not-completed-color: #e74c3c;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #f9f9f9;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--secondary-color);
+}
+
+header span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav {
+    background-color: var(--dark-color);
+    position: relative;
+}
+
+nav ul {
+    list-style-type: none;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+
+nav ul.show {
+    display: flex;
+}
+
+nav ul li {
+    text-align: center;
+    padding: 0.5rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+nav ul li.active a {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+nav ul li:hover a {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+}
+
+#menu-button {
+    display: block;
+    background-color: var(--dark-color);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+main {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-buttons button {
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-buttons button:hover {
+    background-color: var(--primary-color);
+}
+
+#course-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.course-card {
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: var(--light-color);
+    border-left: 5px solid var(--secondary-color);
+}
+
+.course-card.completed {
+    border-left-color: var(--completed-color);
+    background-color: rgba(39, 174, 96, 0.1);
+}
+
+.course-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.course-card p {
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+section {
+    text-align: center;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+section p {
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
