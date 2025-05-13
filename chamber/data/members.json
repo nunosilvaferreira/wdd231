@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Alpha Technologies",
+    "address": "101 Innovation Drive, Tech City",
+    "phone": "+1 (555) 123-4567",
+    "website": "https://www.alphatech.com",
+    "image": "alpha-tech.png",
+    "membership": 3
+  },
+  {
+    "name": "Beta Financial Group",
+    "address": "202 Market Street, Downtown",
+    "phone": "+1 (555) 234-5678",
+    "website": "https://www.betafinance.com",
+    "image": "beta-finance.png",
+    "membership": 2
+  },
+  {
+    "name": "Gamma Creative Studio",
+    "address": "303 Art Lane, Creative District",
+    "phone": "+1 (555) 345-6789",
+    "website": "https://www.gammacreative.com",
+    "image": "gamma-creative.png",
+    "membership": 1
+  },
+  {
+    "name": "Delta Health & Wellness",
+    "address": "404 Wellness Blvd, Health Park",
+    "phone": "+1 (555) 456-7890",
+    "website": "https://www.deltahealth.com",
+    "image": "delta-health.png",
+    "membership": 2
+  },
+  {
+    "name": "Epsilon Education Services",
+    "address": "505 Learning Way, University Town",
+    "phone": "+1 (555) 567-8901",
+    "website": "https://www.epsilonedu.com",
+    "image": "epsilon-education.png",
+    "membership": 1
+  },
+  {
+    "name": "Zeta Construction Co.",
+    "address": "606 Builder Road, Industrial Zone",
+    "phone": "+1 (555) 678-9012",
+    "website": "https://www.zetaconstruct.com",
+    "image": "zeta-construction.png",
+    "membership": 3
+  },
+  {
+    "name": "Omega Retail Group",
+    "address": "707 Commerce Ave, Shopping District",
+    "phone": "+1 (555) 789-0123",
+    "website": "https://www.omegaretail.com",
+    "image": "omega-retail.png",
+    "membership": 2
+  }
+]
