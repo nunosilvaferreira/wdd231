@@ -11,14 +11,14 @@ header, footer {
   text-align: center;
 }
 
-/* Esconde o botão por defeito (desktop) */
+/* Hide menu button by default (desktop) */
 #menu-toggle {
   display: none;
   background: none;
   border: none;
   font-size: 2rem;
   cursor: pointer;
-  padding: 0.5em;
+  padding: 0.5rem;
 }
 
 nav ul {
@@ -29,7 +29,7 @@ nav ul {
 }
 
 nav li {
-  margin: 0 10px;
+  margin: 0 1rem;
 }
 
 nav a {
@@ -63,7 +63,7 @@ nav a {
 }
 
 .member-card img {
-  width: 100px;
+  max-width: 100px;
   height: auto;
   margin-bottom: 0.5rem;
 }
@@ -73,23 +73,19 @@ nav a {
   color: #006600;
 }
 
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-  }
-}
-
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   #menu-toggle {
     display: block;
   }
 
-  
-  #main-nav ul {
+  nav ul {
     display: none;
     flex-direction: column;
   }
 
+  nav li {
+    margin: 0.5rem 0;
+  }
 
   #main-nav.open ul {
     display: flex;
