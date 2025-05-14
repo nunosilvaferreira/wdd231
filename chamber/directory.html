@@ -12,24 +12,21 @@
   <meta property="og:title" content="Chamber Directory">
   <meta property="og:description" content="Explore our chamber's trusted business members.">
   <meta property="og:image" content="images/social-preview.png">
-  <meta property="og:url" content="https://nuno-lvaferreira.github.io/wdd231/chamber/directory.html">
+  <meta property="og:url" content="https://nunosilvaferreira.github.io/wdd231/chamber/directory.html">
 
   <!-- Styles -->
   <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
 </head>
 <body>
   <header>
     <h1>Chamber of Commerce Directory</h1>
-
-    <!-- Hamburger button -->
     <button id="menu-toggle" aria-label="Toggle menu">☰</button>
-
-    <!-- Navigation menu -->
     <nav id="main-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="directory.html">Directory</a></li>
+        <li><a href="directory.html" aria-current="page">Directory</a></li>
         <li><a href="about.html">About</a></li>
       </ul>
     </nav>
@@ -37,8 +34,8 @@
 
   <main>
     <div class="view-toggle">
-      <button id="grid-view" class="view-btn">🔲 Grid View</button>
-      <button id="list-view" class="view-btn">📃 List View</button>
+      <button id="grid-view" class="view-btn active">🔲 Grid</button>
+      <button id="list-view" class="view-btn">📃 List</button>
     </div>
     <section id="members" class="grid-view"></section>
   </main>

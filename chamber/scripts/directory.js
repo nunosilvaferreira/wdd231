@@ -1,85 +1,63 @@
+// DOM Elements
 const membersContainer = document.getElementById("members");
-const gridBtn = document.getElementById("grid-view");
-const listBtn = document.getElementById("list-view");
+const [gridBtn, listBtn] = document.querySelectorAll(".view-btn");
+const toggleBtn = document.getElementById("menu-toggle");
+const nav = document.getElementById("main-nav");
 
-async function fetchMembers() {
+// View toggle functionality
+function setView(view) {
+  membersContainer.className = view;
+  gridBtn.classList.toggle("active", view === "grid-view");
+  listBtn.classList.toggle("active", view === "list-view");
+}
+
+// Fetch and display members
+async function getMembers() {
   try {
     const response = await fetch("data/members.json");
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-    const members = await response.json();
-    displayMembers(members);
+    return await response.json();
   } catch (error) {
-    console.error("Failed to fetch member data:", error);
-    membersContainer.innerHTML = `
-      <div class="error-message">
-        <p>We're sorry, we couldn't load the member directory at this time.</p>
-        <p>Please try again later.</p>
-      </div>
-    `;
+    console.error("Error fetching members:", error);
+    membersContainer.innerHTML = `<p class="error">Error loading members. Please try again later.</p>`;
+    return [];
   }
 }
 
-function displayMembers(members) {
-  membersContainer.innerHTML = "";
+function createMemberCard(member) {
+  const card = document.createElement("article");
+  card.className = "member-card";
+  const levels = ["Basic", "Silver", "Gold"];
   
+  card.innerHTML = `
+    <img src="images/${member.image}" alt="${member.name} logo" loading="lazy">
+    <h2>${member.name}</h2>
+    <address>${member.address}</address>
+    <p><a href="tel:${member.phone.replace(/\D/g, '')}">${member.phone}</a></p>
+    <a href="${member.website}" target="_blank" rel="noopener">Website</a>
+    <p class="level">Level: ${levels[member.membership - 1]}</p>
+  `;
+  
+  return card;
+}
+
+async function displayMembers() {
+  const members = await getMembers();
+  membersContainer.innerHTML = "";
   members.forEach(member => {
-    const card = document.createElement("article");
-    card.classList.add("member-card");
-    
-    const membershipLevels = ["Member", "Silver", "Gold"];
-    const levelClass = `level-${member.membership}`;
-    
-    card.innerHTML = `
-      <img src="images/${member.image}" alt="${member.name} logo" loading="lazy" width="120" height="80">
-      <h2>${member.name}</h2>
-      <address>${member.address}</address>
-      <p><a href="tel:${member.phone.replace(/\D/g, '')}">${member.phone}</a></p>
-      <p><a href="${member.website}" target="_blank" rel="noopener noreferrer">Visit Website</a></p>
-      <p class="level" data-level="${member.membership}">
-        Membership Level: ${membershipLevels[member.membership - 1]}
-      </p>
-    `;
-    
-    membersContainer.appendChild(card);
+    membersContainer.appendChild(createMemberCard(member));
   });
 }
 
-// View toggle functionality
-gridBtn.addEventListener("click", () => {
-  membersContainer.classList.add("grid-view");
-  membersContainer.classList.remove("list-view");
-  gridBtn.classList.add("active");
-  listBtn.classList.remove("active");
+// Event Listeners
+gridBtn.addEventListener("click", () => setView("grid-view"));
+listBtn.addEventListener("click", () => setView("list-view"));
+toggleBtn.addEventListener("click", () => {
+  nav.classList.toggle("open");
+  toggleBtn.setAttribute("aria-expanded", nav.classList.contains("open"));
 });
-
-listBtn.addEventListener("click", () => {
-  membersContainer.classList.add("list-view");
-  membersContainer.classList.remove("grid-view");
-  listBtn.classList.add("active");
-  gridBtn.classList.remove("active");
-});
-
-// Mobile menu toggle
-const toggleButton = document.getElementById('menu-toggle');
-const nav = document.getElementById('main-nav');
-
-toggleButton.addEventListener('click', () => {
-  nav.classList.toggle('open');
-  toggleButton.setAttribute('aria-expanded', nav.classList.contains('open'));
-});
-
-// Close menu when clicking on a link
-document.querySelectorAll('#main-nav a').forEach(link => {
-  link.addEventListener('click', () => {
-    nav.classList.remove('open');
-    toggleButton.setAttribute('aria-expanded', 'false');
-  });
-});
-
-// Footer info
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = document.lastModified;
 
 // Initialize
-gridBtn.classList.add("active");
-fetchMembers();
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = document.lastModified;
+displayMembers();
