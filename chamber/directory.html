@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chamber of Commerce Directory</title>
-  <meta name="description" content="Directory of local businesses in our Chamber of Commerce.">
+  <title>Chamber of Commerce Directory | Local Business Network</title>
+  <meta name="description" content="Browse our directory of trusted local businesses and chamber members. Find contact information, services, and membership levels.">
   <meta name="author" content="Nuno Ferreira">
   <link rel="icon" href="images/favicon.ico">
 
@@ -23,7 +23,7 @@
     <h1>Chamber of Commerce Directory</h1>
 
     <!-- Hamburger button -->
-    <button id="menu-toggle">☰</button>
+    <button id="menu-toggle" aria-label="Toggle menu">☰</button>
 
     <!-- Navigation menu -->
     <nav id="main-nav">
@@ -37,8 +37,8 @@
 
   <main>
     <div class="view-toggle">
-      <button id="grid-view">🔲 Grid</button>
-      <button id="list-view">📃 List</button>
+      <button id="grid-view" class="view-btn">🔲 Grid View</button>
+      <button id="list-view" class="view-btn">📃 List View</button>
     </div>
     <section id="members" class="grid-view"></section>
   </main>
