@@ -1,55 +1,4 @@
-/* Larger screen styles */
-@media (min-width: 769px) {
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-  }
-
-  #menu-toggle {
-    display: none;
-  }
-
-  nav ul {
-    display: flex;
-  }
-}
-
-/* Mobile styles */
-@media (max-width: 768px) {
-  header {
-    position: relative;
-    padding: 1rem;
-  }
-
-  #menu-toggle {
-    display: block;
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-  }
-
-  nav ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 1rem;
-  }
-
-  #main-nav.open ul {
-    display: flex;
-  }
-
-  .view-toggle {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-  }
-}
-
-/* Add to index page*/
-
+/* Desktop Styles */
 @media (min-width: 768px) {
     .home-main {
         display: grid;
@@ -75,6 +24,14 @@
     }
     
     .spotlight-container {
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 }

@@ -1,11 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
     fetch('data/members.json')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
         .then(data => {
             displaySpotlights(data);
         })
         .catch(error => {
             console.error('Error loading member data:', error);
+            document.querySelector('.spotlight-container').innerHTML = 
+                '<p>Member spotlights currently unavailable</p>';
         });
 });
 
@@ -15,7 +22,7 @@ function displaySpotlights(members) {
     
     // Filter gold and silver members
     const qualifiedMembers = members.filter(member => 
-        member.membershipLevel === 'Gold' || member.membershipLevel === 'Silver'
+        ['Gold', 'Silver'].includes(member.membershipLevel)
     );
     
     // Randomly select 2-3 members
@@ -34,10 +41,10 @@ function displaySpotlights(members) {
         card.className = 'spotlight-card';
         card.innerHTML = `
             <h3>${member.name}</h3>
-            <img src="images/${member.image}" alt="${member.name} logo" loading="lazy">
+            <img src="images/${member.image}" alt="${member.name} logo" loading="lazy" width="100" height="100">
             <p>${member.address}</p>
             <p>${member.phone}</p>
-            <p><a href="${member.website}" target="_blank">Visit Website</a></p>
+            <p><a href="${member.website}" target="_blank" rel="noopener">Visit Website</a></p>
             <p class="membership-level">${member.membershipLevel} Member</p>
         `;
         container.appendChild(card);
