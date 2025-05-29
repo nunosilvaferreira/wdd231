@@ -1,46 +1,37 @@
-/* Larger Screens */
+/* Desktop Styles */
 @media (min-width: 768px) {
-  main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
+    .home-main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+    }
+    
+    .hero {
+        grid-column: 1 / -1;
+    }
+    
+    .current-events {
+        grid-column: 1;
+    }
+    
+    .weather {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    
+    .spotlights {
+        grid-column: 1 / -1;
+    }
+    
+    .spotlight-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
 
-  .hero {
-    grid-column: 1 / -1;
-  }
-
-  .spotlight {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-  }
-
-  .spotlight-card {
-    margin-bottom: 0;
-  }
-}
-
-/* Mobile Menu */
-@media (max-width: 767px) {
-  #menu-toggle {
-    display: block;
-    background: none;
-    border: none;
-    color: inherit;
-    font-size: 1.5rem;
-  }
-
-  nav ul {
-    display: none;
-    flex-direction: column;
-  }
-
-  nav.open ul {
-    display: flex;
-  }
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
