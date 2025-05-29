@@ -1,0 +1,43 @@
+WDD 231 - Project Subject Proposal
+Student Name: Nuno Ferreira
+Date: May 29, 2025
+
+---
+
+1. PROJECT SUBJECT
+"Community Serve Hub" - A volunteer platform connecting people with local community service opportunities and nonprofit projects.
+
+---
+
+2. PROJECT DESCRIPTION
+This 3-page website will include:
+
+- HOMEPAGE:
+  * Mission statement and hero section
+  * Featured volunteer opportunities
+  * Call-to-action buttons
+
+- OPPORTUNITIES PAGE:
+  * Searchable list of projects
+  * Filter by category/location
+  * Organization details and sign-up links
+
+- GET INVOLVED PAGE:
+  * Volunteer registration form
+  * FAQ section
+  * Contact information
+
+Technical features will include responsive design, accessibility compliance, and potential API integration for dynamic content.
+
+---
+
+3. PROJECT REASON AND PURPOSE
+Why chosen:
+- Addresses real community needs
+- Aligns with course objectives (APIs, accessibility)
+- Personal interest in social impact
+
+Purpose:
+- Connect volunteers with opportunities
+- Support nonprofit organizations
+- Demonstrate web development skills
