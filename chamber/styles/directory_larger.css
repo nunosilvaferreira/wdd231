@@ -1,0 +1,11 @@
+/* Larger screen styles */
+@media (min-width: 1024px) {
+    #member-container {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    
+    nav ul {
+        justify-content: center;
+        gap: 2rem;
+    }
+}
