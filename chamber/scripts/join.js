@@ -19,9 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
         this.setAttribute('aria-expanded', navList.classList.contains('show'));
     });
 
-    // Animate benefit cards with staggered delay
-    const benefitCards = document.querySelectorAll('.benefit-card');
-    benefitCards.forEach((card, index) => {
+    // Animate plan cards with staggered delay
+    const planCards = document.querySelectorAll('.plan-card');
+    planCards.forEach((card, index) => {
         card.style.animation = `fadeInUp 0.5s ease forwards ${index * 0.1}s`;
     });
 

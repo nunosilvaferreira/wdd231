@@ -30,80 +30,12 @@
     </nav>
     <main>
         <h2>Become a Member</h2>
-        <form id="joinForm" method="get" action="thankyou.html">
-            <fieldset>
-                <legend>Personal Information</legend>
-                <label>
-                    First Name*:
-                    <input type="text" name="firstName" required autocomplete="given-name" title="Please enter your first name">
-                </label>
-                <label>
-                    Last Name*:
-                    <input type="text" name="lastName" required autocomplete="family-name" title="Please enter your last name">
-                </label>
-                <label>
-                    Business Position:
-                    <input type="text" name="position" pattern="[A-Za-z\- ]{7,}" 
-                           title="Only letters, hyphens, and spaces (minimum 7 characters)" 
-                           autocomplete="organization-title">
-                </label>
-            </fieldset>
-
-            <fieldset>
-                <legend>Contact Information</legend>
-                <label>
-                    Email*:
-                    <input type="email" name="email" required autocomplete="email" 
-                           placeholder="example@yourbusiness.com" title="Please enter a valid email address">
-                </label>
-                <label>
-                    Phone*:
-                    <input type="tel" name="phone" required autocomplete="tel" title="Please enter your phone number">
-                </label>
-            </fieldset>
-
-            <fieldset>
-                <legend>Business Information</legend>
-                <label>
-                    Business Name*:
-                    <input type="text" name="business" required autocomplete="organization" title="Please enter your business name">
-                </label>
-                <label>
-                    Business Description:
-                    <textarea name="description" rows="4" title="Tell us about your business"></textarea>
-                </label>
-            </fieldset>
-
-            <fieldset>
-                <legend>Membership Level*</legend>
-                <div class="membership-options">
-                    <label>
-                        <input type="radio" name="membership" value="np" required> 
-                        <strong>NP Membership</strong> (Non-Profit, No Fee)
-                    </label>
-                    <label>
-                        <input type="radio" name="membership" value="bronze"> 
-                        <strong>Bronze Membership</strong> ($100/year)
-                    </label>
-                    <label>
-                        <input type="radio" name="membership" value="silver"> 
-                        <strong>Silver Membership</strong> ($250/year)
-                    </label>
-                    <label>
-                        <input type="radio" name="membership" value="gold"> 
-                        <strong>Gold Membership</strong> ($500/year)
-                    </label>
-                </div>
-            </fieldset>
-
-            <input type="hidden" name="timestamp" id="timestamp">
-            <button type="submit" class="submit-btn">Submit Membership Application</button>
-        </form>
-
-        <section class="benefits-section">
-            <h3>Membership Benefits</h3>
-            <div class="benefits-grid">
-                <article class="benefit-card" data-level="np">
+        
+        <!-- Membership Plans Section (Now at the top) -->
+        <section class="plans-section">
+            <h3>Choose Your Membership Plan</h3>
+            <div class="plans-grid">
+                <article class="plan-card" data-level="np">
                     <h4>NP Membership</h4>
                     <p class="price">Free for Non-Profit Organizations</p>
                     <ul>
@@ -116,7 +48,7 @@
                     <button class="learn-more" data-modal="np-modal">Learn More</button>
                 </article>
 
-                <article class="benefit-card" data-level="bronze">
+                <article class="plan-card" data-level="bronze">
                     <h4>Bronze Membership</h4>
                     <p class="price">$100/year</p>
                     <ul>
@@ -130,7 +62,7 @@
                     <button class="learn-more" data-modal="bronze-modal">Learn More</button>
                 </article>
 
-                <article class="benefit-card" data-level="silver">
+                <article class="plan-card" data-level="silver">
                     <h4>Silver Membership</h4>
                     <p class="price">$250/year</p>
                     <ul>
@@ -144,7 +76,7 @@
                     <button class="learn-more" data-modal="silver-modal">Learn More</button>
                 </article>
 
-                <article class="benefit-card" data-level="gold">
+                <article class="plan-card" data-level="gold">
                     <h4>Gold Membership</h4>
                     <p class="price">$500/year</p>
                     <ul>
@@ -159,6 +91,80 @@
                     <button class="learn-more" data-modal="gold-modal">Learn More</button>
                 </article>
             </div>
+        </section>
+
+        <!-- Form Section (Now below plans) -->
+        <section class="form-section">
+            <h3>Application Form</h3>
+            <form id="joinForm" method="get" action="thankyou.html">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label>
+                        First Name*:
+                        <input type="text" name="firstName" required autocomplete="given-name" title="Please enter your first name">
+                    </label>
+                    <label>
+                        Last Name*:
+                        <input type="text" name="lastName" required autocomplete="family-name" title="Please enter your last name">
+                    </label>
+                    <label>
+                        Business Position:
+                        <input type="text" name="position" pattern="[A-Za-z\- ]{7,}" 
+                               title="Only letters, hyphens, and spaces (minimum 7 characters)" 
+                               autocomplete="organization-title">
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <label>
+                        Email*:
+                        <input type="email" name="email" required autocomplete="email" 
+                               placeholder="example@yourbusiness.com" title="Please enter a valid email address">
+                    </label>
+                    <label>
+                        Phone*:
+                        <input type="tel" name="phone" required autocomplete="tel" title="Please enter your phone number">
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Business Information</legend>
+                    <label>
+                        Business Name*:
+                        <input type="text" name="business" required autocomplete="organization" title="Please enter your business name">
+                    </label>
+                    <label>
+                        Business Description:
+                        <textarea name="description" rows="4" title="Tell us about your business"></textarea>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Membership Level*</legend>
+                    <div class="membership-options">
+                        <label>
+                            <input type="radio" name="membership" value="np" required> 
+                            <strong>NP Membership</strong> (Non-Profit, No Fee)
+                        </label>
+                        <label>
+                            <input type="radio" name="membership" value="bronze"> 
+                            <strong>Bronze Membership</strong> ($100/year)
+                        </label>
+                        <label>
+                            <input type="radio" name="membership" value="silver"> 
+                            <strong>Silver Membership</strong> ($250/year)
+                        </label>
+                        <label>
+                            <input type="radio" name="membership" value="gold"> 
+                            <strong>Gold Membership</strong> ($500/year)
+                        </label>
+                    </div>
+                </fieldset>
+
+                <input type="hidden" name="timestamp" id="timestamp">
+                <button type="submit" class="submit-btn">Submit Membership Application</button>
+            </form>
         </section>
 
         <!-- Membership Modals -->
