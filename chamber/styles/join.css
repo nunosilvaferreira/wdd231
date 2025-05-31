@@ -1,10 +1,4 @@
-/* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Base Styles */
 body {
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
@@ -47,6 +41,8 @@ nav ul {
     justify-content: center;
     list-style: none;
     gap: 2rem;
+    padding: 0;
+    margin: 0;
 }
 
 nav a {
@@ -106,7 +102,7 @@ input:focus, select:focus, textarea:focus {
     box-shadow: 0 0 0 2px rgba(52,152,219,0.2);
 }
 
-button[type="submit"] {
+.submit-btn {
     background-color: #3498db;
     color: white;
     padding: 1rem 2rem;
@@ -120,7 +116,7 @@ button[type="submit"] {
     margin-top: 1rem;
 }
 
-button[type="submit"]:hover {
+.submit-btn:hover {
     background-color: #2980b9;
 }
 
@@ -222,14 +218,11 @@ button[type="submit"]:hover {
     cursor: pointer;
     background: none;
     border: none;
+    color: #7f8c8d;
 }
 
-/* Animations */
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.close-modal:hover {
+    color: #333;
 }
 
 /* Footer */
@@ -239,6 +232,15 @@ footer {
     margin-top: 2rem;
     border-top: 1px solid #ddd;
     color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive Design */
@@ -259,19 +261,5 @@ footer {
 
     .benefits-grid {
         grid-template-columns: 1fr;
-    }
-}
-
-@media (min-width: 992px) {
-    main {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-        align-items: start;
-    }
-
-    form {
-        position: sticky;
-        top: 1rem;
     }
 }

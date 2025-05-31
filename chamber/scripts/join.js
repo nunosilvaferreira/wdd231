@@ -16,9 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     menuToggle.addEventListener('click', function() {
         navList.classList.toggle('show');
+        this.setAttribute('aria-expanded', navList.classList.contains('show'));
     });
 
-    // Animate benefit cards
+    // Animate benefit cards with staggered delay
     const benefitCards = document.querySelectorAll('.benefit-card');
     benefitCards.forEach((card, index) => {
         card.style.animation = `fadeInUp 0.5s ease forwards ${index * 0.1}s`;
@@ -33,12 +34,14 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function() {
             const modalId = this.getAttribute('data-modal');
             document.getElementById(modalId).style.display = 'flex';
+            document.body.style.overflow = 'hidden';
         });
     });
 
     closeModalButtons.forEach(button => {
         button.addEventListener('click', function() {
             this.closest('.modal').style.display = 'none';
+            document.body.style.overflow = '';
         });
     });
 
@@ -46,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
         modal.addEventListener('click', function(e) {
             if (e.target === this) {
                 this.style.display = 'none';
+                document.body.style.overflow = '';
             }
         });
     });
@@ -55,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (e.key === 'Escape') {
             modals.forEach(modal => {
                 modal.style.display = 'none';
+                document.body.style.overflow = '';
             });
         }
     });
@@ -64,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (positionInput) {
         positionInput.addEventListener('input', function() {
             const pattern = /^[A-Za-z\- ]{7,}$/;
-            if (!pattern.test(this.value) {
+            if (!pattern.test(this.value)) {
                 this.setCustomValidity('Minimum 7 letters, hyphens or spaces only');
             } else {
                 this.setCustomValidity('');
@@ -76,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function handleResize() {
         if (window.innerWidth > 768) {
             navList.classList.remove('show');
+            menuToggle.setAttribute('aria-expanded', 'false');
         }
     }
 
