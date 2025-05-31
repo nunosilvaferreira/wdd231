@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Chamber | Your City Chamber of Commerce</title>
+    <meta name="description" content="Join our Chamber of Commerce to grow your business">
+    <meta name="author" content="Your Name">
+    <link rel="stylesheet" href="styles/join.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>Your City Chamber of Commerce</h1>
+        <button id="menu-toggle">☰</button>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html" class="active">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Become a Member</h2>
+        <form id="joinForm" method="get" action="thankyou.html">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label>
+                    First Name*:
+                    <input type="text" name="firstName" required autocomplete="given-name">
+                </label>
+                <label>
+                    Last Name*:
+                    <input type="text" name="lastName" required autocomplete="family-name">
+                </label>
+                <label>
+                    Business Position:
+                    <input type="text" name="position" pattern="[A-Za-z\- ]{7,}" 
+                           title="Only letters, hyphens, and spaces (minimum 7 characters)" 
+                           autocomplete="organization-title">
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Contact Information</legend>
+                <label>
+                    Email*:
+                    <input type="email" name="email" required autocomplete="email" placeholder="your@email.com">
+                </label>
+                <label>
+                    Phone*:
+                    <input type="tel" name="phone" required autocomplete="tel">
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Business Information</legend>
+                <label>
+                    Business Name*:
+                    <input type="text" name="business" required autocomplete="organization">
+                </label>
+                <label>
+                    Business Description:
+                    <textarea name="description" rows="4"></textarea>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Membership Level</legend>
+                <div class="membership-options">
+                    <label>
+                        <input type="radio" name="membership" value="np" required> 
+                        <strong>NP Membership</strong> (Non-Profit, No Fee)
+                    </label>
+                    <label>
+                        <input type="radio" name="membership" value="bronze"> 
+                        <strong>Bronze Membership</strong> ($100/year)
+                    </label>
+                    <label>
+                        <input type="radio" name="membership" value="silver"> 
+                        <strong>Silver Membership</strong> ($250/year)
+                    </label>
+                    <label>
+                        <input type="radio" name="membership" value="gold"> 
+                        <strong>Gold Membership</strong> ($500/year)
+                    </label>
+                </div>
+            </fieldset>
+
+            <input type="hidden" name="timestamp" id="timestamp">
+            <button type="submit">Submit Application</button>
+        </form>
+
+         <section class="benefits-section">
+            <h3>Membership Benefits</h3>
+            <div class="benefits-grid">
+                <article class="benefit-card" data-level="np">
+                    <h4>NP Membership</h4>
+                    <p class="price">Free for Non-Profit Organizations</p>
+                    <ul>
+                        <li>Free business listing in our directory</li>
+                        <li>Access to monthly networking events</li>
+                        <li>Quarterly newsletter</li>
+                        <li>Basic member resources</li>
+                        <li>Community support recognition</li>
+                    </ul>
+                    <button class="learn-more" data-modal="np-modal">Learn More</button>
+                </article>
+
+                <article class="benefit-card" data-level="bronze">
+                    <h4>Bronze Membership</h4>
+                    <p class="price">$100/year</p>
+                    <ul>
+                        <li>All NP benefits plus:</li>
+                        <li>Business spotlight opportunities</li>
+                        <li>Access to premium resources</li>
+                        <li>10% discount on chamber events</li>
+                        <li>Social media shoutouts</li>
+                        <li>Annual business review</li>
+                    </ul>
+                    <button class="learn-more" data-modal="bronze-modal">Learn More</button>
+                </article>
+
+                <article class="benefit-card" data-level="silver">
+                    <h4>Silver Membership</h4>
+                    <p class="price">$250/year</p>
+                    <ul>
+                        <li>All Bronze benefits plus:</li>
+                        <li>Priority event registration</li>
+                        <li>25% discount on chamber events</li>
+                        <li>Featured in monthly newsletter</li>
+                        <li>Professional development workshops</li>
+                        <li>Business mentoring sessions</li>
+                    </ul>
+                    <button class="learn-more" data-modal="silver-modal">Learn More</button>
+                </article>
+
+                <article class="benefit-card" data-level="gold">
+                    <h4>Gold Membership</h4>
+                    <p class="price">$500/year</p>
+                    <ul>
+                        <li>All Silver benefits plus:</li>
+                        <li>VIP access to all events</li>
+                        <li>50% discount on chamber events</li>
+                        <li>Homepage featured listing</li>
+                        <li>Dedicated business consultant</li>
+                        <li>Annual leadership conference pass</li>
+                        <li>Exclusive networking dinners</li>
+                    </ul>
+                    <button class="learn-more" data-modal="gold-modal">Learn More</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- Membership Modals -->
+        <div id="np-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3>NP Membership Details</h3>
+                <p>Perfect for non-profit organizations looking to connect with the local business community.</p>
+                <ul>
+                    <li><strong>Eligibility:</strong> Valid 501(c)(3) certification required</li>
+                    <li><strong>Renewal:</strong> Annual verification of non-profit status</li>
+                    <li><strong>Best for:</strong> Charities, community organizations, religious institutions</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="bronze-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3>Bronze Membership Details</h3>
+                <p>Great for small businesses starting to grow their network.</p>
+                <ul>
+                    <li><strong>Employees:</strong> 1-10</li>
+                    <li><strong>Revenue:</strong> Under $500k annually</li>
+                    <li><strong>Best for:</strong> Startups, freelancers, small local businesses</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="silver-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3>Silver Membership Details</h3>
+                <p>Ideal for established businesses ready to expand their influence.</p>
+                <ul>
+                    <li><strong>Employees:</strong> 11-50</li>
+                    <li><strong>Revenue:</strong> $500k-$2M annually</li>
+                    <li><strong>Best for:</strong> Growing businesses, regional services</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="gold-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3>Gold Membership Details</h3>
+                <p>The premium option for market leaders and major employers.</p>
+                <ul>
+                    <li><strong>Employees:</strong> 50+</li>
+                    <li><strong>Revenue:</strong> $2M+ annually</li>
+                    <li><strong>Best for:</strong> Corporations, major employers, market leaders</li>
+                    <li><strong>Additional Perk:</strong> Complimentary booth at annual business expo</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="copyright-year"></span> Your City Chamber</p>
+        <p>Your Name | WDD 231 Project</p>
+        <p id="last-modified"></p>
+    </footer>
+    <script src="scripts/join.js"></script>
+</body>
+</html>
