@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Serve Hub - Site Plan</title>
+    <style>
+        :root {
+            --primary: #2A5B45; /* Dark green */
+            --secondary: #F4A261; /* Orange */
+            --accent: #E9C46A; /* Yellow */
+            --text: #333333; /* Dark gray */
+            --background: #F8F9FA; /* Light gray */
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--background);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary);
+        }
+        
+        h1 {
+            color: white;
+        }
+        
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .color-schema {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .color-box {
+            width: 100px;
+            height: 100px;
+            border-radius: 5px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 10px;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .wireframes {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .wireframe {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .wireframe img {
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Community Serve Hub - Site Plan</h1>
+    </header>
+    
+    <section id="site-name">
+        <h2>1. Site Name</h2>
+        <p><strong>Community Serve Hub</strong></p>
+        <p>This name was selected because it clearly communicates the purpose of the site - to serve as a central hub connecting volunteers with community service opportunities. The name is straightforward, memorable, and describes exactly what the site offers.</p>
+        <p><em>Optional domain availability: communityservehub.org</em></p>
+    </section>
+    
+    <section id="site-purpose">
+        <h2>2. Site Purpose</h2>
+        <p>The Community Serve Hub website will provide:</p>
+        <ul>
+            <li>A centralized platform for local nonprofit organizations to post volunteer opportunities</li>
+            <li>Tools for volunteers to search and filter opportunities by location, cause, and date</li>
+            <li>Information about community impact and success stories</li>
+            <li>Resources for both volunteers and organizations to maximize their service efforts</li>
+            <li>A registration system for volunteers to track their service hours</li>
+        </ul>
+    </section>
+    
+    <section id="scenarios">
+        <h2>3. Scenarios</h2>
+        <p>These questions represent what our target audience might ask:</p>
+        <ol>
+            <li><strong>"Where can I find volunteer opportunities near me this weekend?"</strong> - This drives our search and filtering functionality.</li>
+            <li><strong>"How can my nonprofit organization post our volunteer needs on this platform?"</strong> - This informs our organization registration and posting system.</li>
+            <li><strong>"What kind of impact have volunteers made through this platform?"</strong> - This leads to our impact statistics and success stories section.</li>
+        </ol>
+    </section>
+    
+    <section id="color-schema">
+        <h2>4. Color Schema</h2>
+        <div class="color-schema">
+            <div class="color-box" style="background-color: #2A5B45;">Primary<br>#2A5B45</div>
+            <div class="color-box" style="background-color: #F4A261;">Secondary<br>#F4A261</div>
+            <div class="color-box" style="background-color: #E9C46A;">Accent<br>#E9C46A</div>
+            <div class="color-box" style="background-color: #333333; color: white;">Text<br>#333333</div>
+            <div class="color-box" style="background-color: #F8F9FA; color: #333;">Background<br>#F8F9FA</div>
+        </div>
+        <p><strong>Color Applications:</strong></p>
+        <ul>
+            <li><strong>Primary (#2A5B45):</strong> Headers, navigation, important buttons</li>
+            <li><strong>Secondary (#F4A261):</strong> Secondary buttons, highlights</li>
+            <li><strong>Accent (#E9C46A):</strong> Hover states, small interactive elements</li>
+            <li><strong>Text (#333333):</strong> Body text</li>
+            <li><strong>Background (#F8F9FA):</strong> Page background</li>
+        </ul>
+    </section>
+    
+    <section id="typography">
+        <h2>5. Typography</h2>
+        <p><strong>Font Selections:</strong></p>
+        <ul>
+            <li><strong>Montserrat (Sans-serif):</strong> Used for all headings (h1, h2, h3)</li>
+            <li><strong>Open Sans (Sans-serif):</strong> Used for body text and all other content</li>
+        </ul>
+        <p>These fonts were chosen for their readability, modern appearance, and complementary pairing. Both are widely available through Google Fonts.</p>
+    </section>
+    
+   <section id="wireframe">
+    <h2>6. Wireframe</h2>
+    <div class="wireframes">
+        <div class="wireframe">
+            <h3>Mobile View</h3>
+            <div style="border: 2px solid var(--primary); width: 300px; height: 600px; position: relative; margin: 0 auto;">
+                <!-- Header -->
+                <div style="height: 60px; background: var(--primary); display: flex; justify-content: space-between; padding: 10px; align-items: center;">
+                    <div style="color: white; font-weight: bold;">[LOGO]</div>
+                    <div style="color: white;">☰</div>
+                </div>
+                
+                <!-- Hero -->
+                <div style="height: 150px; background: var(--accent); margin: 10px; position: relative;">
+                    <div style="position: absolute; bottom: 10px; left: 10px; color: var(--text);">"Make a Difference"</div>
+                </div>
+                
+                <!-- Search -->
+                <div style="height: 40px; background: white; border: 1px dashed var(--text); margin: 10px; display: flex; justify-content: center; align-items: center;">
+                    [Search]
+                </div>
+                
+                <!-- Filters -->
+                <div style="display: flex; flex-wrap: wrap; gap: 5px; padding: 10px;">
+                    <div style="flex: 1; min-width: 100px; height: 30px; border: 1px dashed var(--text); display: flex; justify-content: center; align-items: center;">Location</div>
+                    <div style="flex: 1; min-width: 100px; height: 30px; border: 1px dashed var(--text); display: flex; justify-content: center; align-items: center;">Cause</div>
+                    <div style="flex: 1; min-width: 100px; height: 30px; border: 1px dashed var(--text); display: flex; justify-content: center; align-items: center;">Date</div>
+                </div>
+                
+                <!-- Opportunity Cards -->
+                <div style="margin: 10px; border: 1px dashed var(--text); height: 80px; position: relative;">
+                    <div style="position: absolute; left: 10px; top: 10px;">[Image]</div>
+                    <div style="position: absolute; left: 80px; top: 10px;">Beach Cleanup<br>Jun 15</div>
+                    <div style="position: absolute; right: 10px; bottom: 10px; background: var(--secondary); padding: 5px; border-radius: 3px;">Sign Up</div>
+                </div>
+                
+                <!-- Footer -->
+                <div style="position: absolute; bottom: 0; width: 100%; height: 50px; background: var(--primary); color: white; display: flex; justify-content: space-around; align-items: center;">
+                    <div>About</div>
+                    <div>Contact</div>
+                    <div>FAQ</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="wireframe">
+            <h3>Desktop View</h3>
+            <div style="border: 2px solid var(--primary); width: 600px; height: 400px; position: relative; margin: 0 auto;">
+                <!-- Header -->
+                <div style="height: 70px; background: var(--primary); display: flex; justify-content: space-between; padding: 0 20px; align-items: center;">
+                    <div style="color: white; font-weight: bold; font-size: 1.2em;">Community Serve Hub</div>
+                    <div style="display: flex; gap: 20px; color: white;">
+                        <span>Home</span>
+                        <span>Opportunities</span>
+                        <span>About</span>
+                        <span>Contact</span>
+                        <span>Sign In</span>
+                    </div>
+                </div>
+                
+                <!-- Hero -->
+                <div style="height: 150px; background: var(--accent); margin: 20px; position: relative;">
+                    <div style="position: absolute; bottom: 20px; left: 20px; font-size: 1.5em; color: var(--text);">"Connect with Opportunities"</div>
+                </div>
+                
+                <!-- Opportunities -->
+                <div style="display: flex; justify-content: space-around; margin: 0 20px;">
+                    <div style="width: 30%; border: 1px dashed var(--text); height: 120px; position: relative;">
+                        <div style="position: absolute; top: 5px; left: 5px;">[Img]</div>
+                        <div style="position: absolute; top: 5px; left: 80px;">Park Cleanup</div>
+                        <div style="position: absolute; bottom: 5px; right: 5px; background: var(--secondary); padding: 5px;">Volunteer</div>
+                    </div>
+                    <div style="width: 30%; border: 1px dashed var(--text); height: 120px; position: relative;">
+                        <div style="position: absolute; top: 5px; left: 5px;">[Img]</div>
+                        <div style="position: absolute; top: 5px; left: 80px;">Tutoring</div>
+                        <div style="position: absolute; bottom: 5px; right: 5px; background: var(--secondary); padding: 5px;">Volunteer</div>
+                    </div>
+                    <div style="width: 30%; border: 1px dashed var(--text); height: 120px; position: relative;">
+                        <div style="position: absolute; top: 5px; left: 5px;">[Img]</div>
+                        <div style="position: absolute; top: 5px; left: 80px;">Food Drive</div>
+                        <div style="position: absolute; bottom: 5px; right: 5px; background: var(--secondary); padding: 5px;">Volunteer</div>
+                    </div>
+                </div>
+                
+                <!-- Footer -->
+                <div style="position: absolute; bottom: 0; width: 100%; height: 60px; background: var(--primary); color: white; display: flex; justify-content: space-around; align-items: center;">
+                    <div>About</div>
+                    <div>Contact</div>
+                    <div>Partners</div>
+                    <div>FAQ</div>
+                    <div>Privacy</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    
+    <footer>
+        <p>Community Serve Hub Site Plan | WDD 231 | Week 05 Project</p>
+    </footer>
+</body>
+</html>
