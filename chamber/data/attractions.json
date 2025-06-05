@@ -1,0 +1,52 @@
+{
+    "attractions": [
+        {
+            "name": "City Park",
+            "address": "100 Park Avenue, Porto",
+            "description": "A beautiful 50-acre park with walking trails, playgrounds, and picnic areas. Perfect for family outings and outdoor activities.",
+            "image": "images/attractions/park.webp"
+        },
+        {
+            "name": "Historical Museum",
+            "address": "200 Museum Lane, Porto",
+            "description": "Explore our city's rich history through interactive exhibits and artifacts dating back to the 1800s.",
+            "image": "images/attractions/museum.webp"
+        },
+        {
+            "name": "Downtown Shopping District",
+            "address": "Main Street, Porto",
+            "description": "Vibrant shopping area with local boutiques, restaurants, and monthly street fairs.",
+            "image": "images/attractions/shopping.webp"
+        },
+        {
+            "name": "Riverfront Plaza",
+            "address": "300 River Road, Porto",
+            "description": "Scenic river views with a boardwalk, outdoor concerts in summer, and ice skating in winter.",
+            "image": "images/attractions/riverfront.webp"
+        },
+        {
+            "name": "Science Center",
+            "address": "400 Discovery Drive, Porto",
+            "description": "Interactive science exhibits for all ages, planetarium, and STEM workshops for kids.",
+            "image": "images/attractions/science.webp"
+        },
+        {
+            "name": "Botanical Gardens",
+            "address": "500 Garden Way, Porto",
+            "description": "Stunning 30-acre gardens featuring native plants, rose gardens, and seasonal flower displays.",
+            "image": "images/attractions/garden.webp"
+        },
+        {
+            "name": "Sports Complex",
+            "address": "600 Field Street, Porto",
+            "description": "State-of-the-art facilities for baseball, soccer, tennis, and swimming with public access hours.",
+            "image": "images/attractions/sports.webp"
+        },
+        {
+            "name": "Performing Arts Center",
+            "address": "700 Stage Boulevard, Porto",
+            "description": "Hosting Broadway shows, symphony performances, and local theater productions year-round.",
+            "image": "images/attractions/arts.webp"
+        }
+    ]
+}

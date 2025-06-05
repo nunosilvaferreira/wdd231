@@ -1,0 +1,198 @@
+/* Base styles for discover page */
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 80px;
+}
+
+nav ul {
+    display: none;
+    list-style: none;
+}
+
+nav ul.show {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+nav ul li {
+    margin: 0.5rem 0;
+}
+
+nav a {
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #34495e;
+}
+
+#hamburger-menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: block;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.discover-main {
+    display: grid;
+    grid-template-areas: 
+        "sidebar"
+        "attractions";
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #ecf0f1;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.visitor-message {
+    background-color: #3498db;
+    color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.demographics {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.attractions {
+    grid-area: attractions;
+}
+
+.attractions h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-areas: 
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+    gap: 1rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.card address {
+    font-style: normal;
+    color: #7f8c8d;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    margin-bottom: 1rem;
+}
+
+.card button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #2980b9;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-media img {
+    width: 32px;
+    height: 32px;
+}
+
+.copyright {
+    font-size: 0.8rem;
+}
