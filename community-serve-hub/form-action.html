@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Community Serve Hub</title>
+    <meta name="description" content="Thank you for volunteering with Community Serve Hub">
+    <meta name="author" content="Community Serve Hub">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="images/logo.svg" alt="Community Serve Hub Logo" width="150">
+        </a>
+        <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="opportunities.html">Opportunities</a></li>
+                <li><a href="get-involved.html">Get Involved</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-confirmation">
+            <div id="form-data">
+                <h1>Thank You for Your Application!</h1>
+                <p>We've received your volunteer application and will contact you shortly.</p>
+                <p>In the meantime, you can <a href="opportunities.html">browse more opportunities</a> or <a href="index.html">return home</a>.</p>
+            </div>
+
+            <div class="next-steps">
+                <h2>Next Steps</h2>
+                <ol>
+                    <li>Our team will review your application within 2 business days</li>
+                    <li>We'll contact you to discuss matching you with opportunities</li>
+                    <li>You'll receive orientation materials for your selected opportunity</li>
+                </ol>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Community Serve Hub</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="attributions.html">Attributions</a></li>
+                    <li><a href="https://youtu.be/your-video-id">Project Video</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script type="module">
+        import { processFormData } from './scripts/form-handler.js';
+        document.addEventListener('DOMContentLoaded', processFormData);
+    </script>
+</body>
+</html>

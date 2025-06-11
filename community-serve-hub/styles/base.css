@@ -1,0 +1,83 @@
+/* Design Principles: Proximity, Alignment, Repetition, Contrast */
+:root {
+    --primary: #2A5B45;
+    --secondary: #F4A261;
+    --accent: #E9C46A;
+    --text: #333333;
+    --background: #F8F9FA;
+    --white: #FFFFFF;
+}
+
+/* Accessibility: Color contrast meets AA standards */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--background);
+    margin: 0;
+}
+
+/* Responsive Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Mobile-first responsive design */
+@media (max-width: 767px) {
+    #menu-toggle {
+        display: block;
+    }
+    
+    #main-nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary);
+    }
+    
+    #main-nav.active {
+        display: block;
+    }
+    
+    #main-nav ul {
+        flex-direction: column;
+    }
+}
+
+/* Larger screens */
+@media (min-width: 768px) {
+    #menu-toggle {
+        display: none;
+    }
+    
+    #main-nav {
+        display: block;
+    }
+    
+    #main-nav ul {
+        display: flex;
+        gap: 1.5rem;
+    }
+}
+
+/* Wayfinding */
+a[aria-current="page"] {
+    font-weight: bold;
+    text-decoration: underline;
+}

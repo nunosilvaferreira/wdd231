@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Connect with local volunteer opportunities through Community Serve Hub">
+    <meta name="author" content="Your Name">
+    <title>Community Serve Hub | Home</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="icon" href="favicon.ico">
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Community Serve Hub">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io/wdd231/community-serve-hub/">
+    <script type="module" src="scripts/main.js"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html" aria-current="page">
+            <img src="images/logo.svg" alt="Community Serve Hub Logo" width="150">
+        </a>
+        <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="opportunities.html">Opportunities</a></li>
+                <li><a href="get-involved.html">Get Involved</a></li>
+            </ul>
+        </nav>
+    </header>
+   <main>
+    <section class="volunteer-form">
+        <h1>Get Involved</h1>
+        <p>Join our community of volunteers and make a difference today!</p>
+        
+        <form id="volunteer-form" action="form-action.html" method="get">
+            <div class="form-group">
+                <label for="full-name">Full Name*</label>
+                <input type="text" id="full-name" name="full-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+
+            <div class="form-group">
+                <label for="interests">Areas of Interest*</label>
+                <select id="interests" name="interests" multiple required>
+                    <option value="environment">Environment</option>
+                    <option value="education">Education</option>
+                    <option value="animals">Animals</option>
+                    <option value="seniors">Senior Care</option>
+                    <option value="health">Health Services</option>
+                </select>
+                <small>Hold Ctrl/Cmd to select multiple options</small>
+            </div>
+
+            <div class="form-group">
+                <label for="availability">Availability*</label>
+                <div class="availability-options">
+                    <label><input type="checkbox" name="availability" value="weekdays"> Weekdays</label>
+                    <label><input type="checkbox" name="availability" value="weekends"> Weekends</label>
+                    <label><input type="checkbox" name="availability" value="mornings"> Mornings</label>
+                    <label><input type="checkbox" name="availability" value="afternoons"> Afternoons</label>
+                    <label><input type="checkbox" name="availability" value="evenings"> Evenings</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="experience">Previous Volunteer Experience</label>
+                <textarea id="experience" name="experience" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="referral">How did you hear about us?</label>
+                <select id="referral" name="referral">
+                    <option value="">Select an option</option>
+                    <option value="social">Social Media</option>
+                    <option value="friend">Friend/Family</option>
+                    <option value="search">Search Engine</option>
+                    <option value="event">Community Event</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <button type="submit" class="submit-button">Submit Application</button>
+        </form>
+    </section>
+
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <button class="faq-question">Who can volunteer?</button>
+            <div class="faq-answer">
+                <p>Anyone aged 16 and above can volunteer. Some opportunities may have specific age requirements which will be listed in the opportunity details.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Do I need any special skills?</button>
+            <div class="faq-answer">
+                <p>Most opportunities don't require special skills - just a willingness to help! Specific skill requirements will be listed in the opportunity details.</p>
+            </div>
+        </div>
+    </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <!-- Footer content -->
+            <a href="attributions.html">Attributions</a>
+            <a href="https://youtu.be/your-video-id">View Project Video</a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,232 @@
+/* Buttons */
+.button, .cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--secondary);
+    color: var(--text);
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button {
+    background-color: var(--primary);
+    color: white;
+    font-size: 1.1rem;
+}
+
+.button:hover, .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Cards */
+.opportunity-card {
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.opportunity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.opportunity-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.opportunity-card-content {
+    padding: 1rem;
+}
+
+/* Form Elements */
+input, select, textarea {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+select[multiple] {
+    min-height: 100px;
+}
+
+/* Testimonials */
+.testimonial {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    scroll-snap-align: start;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.testimonial blockquote {
+    font-style: italic;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.testimonial blockquote::before {
+    content: '"';
+    font-size: 3rem;
+    position: absolute;
+    left: -1rem;
+    top: -1rem;
+    color: var(--accent);
+    opacity: 0.3;
+}
+
+/* FAQ */
+.faq-item {
+    margin-bottom: 1rem;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+    background-color: var(--background);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.faq-answer {
+    padding: 0 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer.active {
+    padding: 1rem;
+    max-height: 500px;
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    min-height: 400px;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+/* Featured Opportunities */
+.featured-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    background: white;
+}
+
+.featured-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.featured-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.featured-content {
+    padding: 1.5rem;
+}
+
+.opportunity-meta {
+    display: flex;
+    gap: 1rem;
+    margin: 0.5rem 0;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.opportunity-meta i {
+    margin-right: 0.3rem;
+    color: var(--primary);
+}
+
+.truncate {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.learn-more {
+    display: inline-block;
+    color: var(--primary);
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 0.5rem;
+}
+
+.learn-more:hover {
+    text-decoration: underline;
+}
+
+/* Loading States */
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--background);
+    border-top: 5px solid var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 2rem auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.error-message {
+    text-align: center;
+    padding: 2rem;
+    background: #ffeeee;
+    border-radius: 8px;
+}
+
+/* Statistics Animation */
+.stat-item {
+    padding: 1rem;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: var(--text-light);
+}
