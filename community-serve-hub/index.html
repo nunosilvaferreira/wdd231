@@ -3,87 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Connect with local volunteer opportunities through Community Serve Hub">
-    <meta name="author" content="Your Name">
     <title>Community Serve Hub | Home</title>
     <link rel="stylesheet" href="styles/base.css">
-    <link rel="icon" href="favicon.ico">
-    <!-- Open Graph tags -->
-    <meta property="og:title" content="Community Serve Hub">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nunosilvaferreira.github.io/wdd231/community-serve-hub/">
-    <script type="module" src="scripts/main.js"></script>
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <a href="index.html" aria-current="page">
-            <img src="images/logo.svg" alt="Community Serve Hub Logo" width="150">
-        </a>
-        <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
-        <nav id="main-nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="opportunities.html">Opportunities</a></li>
-                <li><a href="get-involved.html">Get Involved</a></li>
-            </ul>
-        </nav>
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.svg" alt="Community Serve Hub Logo" width="180">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="opportunities.html">Opportunities</a></li>
+                    <li><a href="get-involved.html">Get Involved</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </header>
+
     <main>
-    <section class="hero">
-        <picture>
-            <source media="(max-width: 767px)" srcset="images/hero-mobile.jpg">
-            <source media="(min-width: 768px)" srcset="images/hero-desktop.jpg">
-            <img src="images/hero-desktop.jpg" alt="Volunteers working together in community" loading="lazy">
-        </picture>
-        <div class="hero-content">
-            <h1>Make a Difference in Your Community</h1>
-            <a href="opportunities.html" class="cta-button">Find Opportunities</a>
-        </div>
-    </section>
-
-    <section class="stats">
-        <div class="stat-item">
-            <span class="stat-number" id="volunteer-count">1000+</span>
-            <span class="stat-label">Volunteers</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-number" id="organization-count">200+</span>
-            <span class="stat-label">Organizations</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-number" id="hours-count">5000+</span>
-            <span class="stat-label">Hours Served</span>
-        </div>
-    </section>
-
-    <section class="featured-opportunities">
-        <h2>Featured Opportunities</h2>
-        <div class="opportunities-grid" id="featured-container">
-            <!-- Dynamically loaded from JSON -->
-        </div>
-        <a href="opportunities.html" class="view-all">View All Opportunities</a>
-    </section>
-
-    <section class="testimonials">
-        <h2>Volunteer Stories</h2>
-        <div class="testimonial-carousel">
-            <div class="testimonial">
-                <blockquote>"Volunteering through Community Serve Hub changed my perspective on our community."</blockquote>
-                <p>- Sarah M., Volunteer</p>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Make a Difference in Your Community</h1>
+                <p>Join thousands of volunteers creating positive change</p>
+                <a href="get-involved.html" class="cta-button">Become a Volunteer</a>
             </div>
-            <div class="testimonial">
-                <blockquote>"We found 50 dedicated volunteers for our park cleanup in just 2 days!"</blockquote>
-                <p>- Green Spaces NGO</p>
+            <div class="hero-image">
+                <img src="images/hero-volunteers.jpg" alt="Diverse group of volunteers smiling" loading="lazy">
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <div>
+                        <span class="stat-number" data-count="2100">0</span>
+                        <span class="stat-label">Volunteers</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-handshake"></i>
+                    <div>
+                        <span class="stat-number" data-count="225">0</span>
+                        <span class="stat-label">Opportunities</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <span class="stat-number" data-count="5500">0</span>
+                        <span class="stat-label">Hours Served</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Opportunities -->
+        <section class="featured-opportunities">
+            <div class="container">
+                <h2>Featured Opportunities</h2>
+                <p class="section-subtitle">Make an impact with these upcoming events</p>
+                
+                <div class="opportunities-grid" id="featured-container">
+                    <!-- Dynamically loaded from opportunities.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <div class="container">
+                <h2>Volunteer Stories</h2>
+                <p class="section-subtitle">Hear from those who've made a difference</p>
+                
+                <div class="testimonial-carousel">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-left"></i>
+                            <p>Volunteering through Community Serve Hub changed my perspective on our community.</p>
+                            <div class="testimonial-author">
+                                <img src="images/testimonial1.jpg" alt="Sarah M." loading="lazy">
+                                <div>
+                                    <strong>Sarah M.</strong>
+                                    <span>Volunteer since 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-left"></i>
+                            <p>We found 50 dedicated volunteers for our park cleanup in just 2 days!</p>
+                            <div class="testimonial-author">
+                                <img src="images/testimonial2.jpg" alt="Green Spaces NGO" loading="lazy">
+                                <div>
+                                    <strong>Green Spaces NGO</strong>
+                                    <span>Community Partner</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Make an Impact?</h2>
+                <p>Join our community of volunteers today and start creating positive change.</p>
+                <div class="cta-buttons">
+                    <a href="get-involved.html" class="cta-button primary">Sign Up Now</a>
+                    <a href="opportunities.html" class="cta-button secondary">Browse Opportunities</a>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer>
-        <div class="footer-content">
-            <!-- Footer content -->
-            <a href="attributions.html">Attributions</a>
-            <a href="https://youtu.be/your-video-id">View Project Video</a>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="images/logo-white.svg" alt="Community Serve Hub" width="160">
+                    <p>Connecting volunteers with meaningful community service opportunities since 2023.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="opportunities.html">Opportunities</a></li>
+                        <li><a href="get-involved.html">Get Involved</a></li>
+                        <li><a href="attributions.html">Attributions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@communityservehub.org</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Volunteer Way, Community City</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Community Serve Hub. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/opportunities.js"></script>
 </body>
 </html>
