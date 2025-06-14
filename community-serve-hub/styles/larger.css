@@ -309,3 +309,76 @@
 .silver { background: #C0C0C0; color: #333; }
 .bronze { background: #CD7F32; color: white; }
 .np { background: #6c757d; color: white; }
+
+/* List View Styles */
+.directory-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.member-list-item {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.member-list-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.list-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--gray-light);
+    padding-bottom: 0.5rem;
+}
+
+.list-item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.list-item-content p {
+    margin: 0;
+}
+
+.list-website-link {
+    align-self: flex-end;
+    margin-top: 1rem;
+    color: var(--accent1-color);
+    font-weight: bold;
+}
+
+/* View Toggle Buttons */
+.view-toggle {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.view-toggle button {
+    background: var(--light-color);
+    border: 1px solid var(--secondary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.view-toggle button.active {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.view-toggle button:hover:not(.active) {
+    background: rgba(87, 197, 182, 0.1);
+}
