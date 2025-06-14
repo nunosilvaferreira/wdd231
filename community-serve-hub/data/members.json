@@ -53,4 +53,85 @@
         "membershipLevel": "Gold",
         "description": "Supporting cultural events and heritage preservation."
     }
+    {
+        "name": "Porto Community Garden",
+        "address": "Rua do Rosário 135, 4050-521 Porto, Portugal",
+        "phone": "+351 22 789 0123",
+        "website": "https://portogarden.example.com",
+        "image": "garden.jpg",
+        "membershipLevel": "Bronze",
+        "description": "Urban gardening initiative promoting sustainable food production."
+    },
+    {
+        "name": "Porto Homeless Support",
+        "address": "Rua de Cedofeita 246, 4050-174 Porto, Portugal",
+        "phone": "+351 22 890 1234",
+        "website": "https://portohomeless.example.com",
+        "image": "homeless.jpg",
+        "membershipLevel": "Silver",
+        "description": "Providing shelter and meals for Porto's homeless population."
+    },
+    {
+        "name": "Porto Literacy Project",
+        "address": "Rua de Passos Manuel 357, 4000-381 Porto, Portugal",
+        "phone": "+351 22 901 2345",
+        "website": "https://portoliteracy.example.com",
+        "image": "literacy.webp",
+        "membershipLevel": "Non-Profit",
+        "description": "Adult literacy programs in underserved communities."
+    },
+    {
+        "name": "Porto Beach Cleaners",
+        "address": "Avenida do Brasil 468, 4150-145 Porto, Portugal",
+        "phone": "+351 22 012 3456",
+        "website": "https://portobeach.example.com",
+        "image": "beach.jpg",
+        "membershipLevel": "Bronze",
+        "description": "Keeping Porto's beaches clean through volunteer efforts."
+    },
+    {
+        "name": "Porto Tech Mentors",
+        "address": "Rua de Gonçalo Cristóvão 579, 4000-270 Porto, Portugal",
+        "phone": "+351 22 123 7890",
+        "website": "https://portotech.example.com",
+        "image": "tech.jpg",
+        "membershipLevel": "Gold",
+        "description": "Teaching digital skills to underprivileged youth."
+    },
+    {
+        "name": "Porto Health Volunteers",
+        "address": "Rua de São João 680, 4000-295 Porto, Portugal",
+        "phone": "+351 22 234 8901",
+        "website": "https://portohealth.example.com",
+        "image": "health.jpg",
+        "membershipLevel": "Silver",
+        "description": "Supporting healthcare services in low-income areas."
+    },
+    {
+        "name": "Porto Music Outreach",
+        "address": "Rua da Música 802, 4150-328 Porto, Portugal",
+        "phone": "+351 22 345 9012",
+        "website": "https://portomusic.example.com",
+        "image": "music.jpg",
+        "membershipLevel": "Bronze",
+        "description": "Bringing music education to disadvantaged children."
+    },
+    {
+        "name": "Porto Disability Support",
+        "address": "Rua do Amial 913, 4200-055 Porto, Portugal",
+        "phone": "+351 22 456 0123",
+        "website": "https://portodisability.example.com",
+        "image": "disability.webp",
+        "membershipLevel": "Non-Profit",
+        "description": "Advocating for and assisting people with disabilities."
+    },
+    {
+        "name": "Porto Green Spaces",
+        "address": "Rua do Jardim 1024, 4050-148 Porto, Portugal",
+        "phone": "+351 22 567 1234",
+        "website": "https://portogreen.example.com",
+        "image": "green.jpg",
+        "membershipLevel": "Silver",
+        "description": "Maintaining and creating urban green areas in Porto."
+    } 
 ]
