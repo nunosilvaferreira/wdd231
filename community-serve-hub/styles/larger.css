@@ -1,0 +1,311 @@
+/* ===== LARGER SCREEN STYLES ===== */
+@media (min-width: 769px) {
+    /* ===== LAYOUT ENHANCEMENTS ===== */
+    .header-grid,
+    .footer-grid,
+    main {
+        padding-left: var(--space-xl);
+        padding-right: var(--space-xl);
+    }
+
+    /* ===== NAVIGATION ===== */
+    #primary-nav {
+        justify-content: flex-start;
+        padding-left: var(--space-xl);
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+        position: relative;
+        margin-bottom: var(--space-xxl);
+        border-radius: 8px;
+        overflow: hidden;
+        max-height: 500px;
+    }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+        min-height: 500px;
+        object-fit: cover;
+    }
+
+    .hero button {
+        position: absolute;
+        bottom: var(--space-xl);
+        right: var(--space-xl);
+        padding: var(--space-md) var(--space-lg);
+        background-color: var(--accent1-color);
+        color: var(--text-light);
+        border: none;
+        border-radius: 4px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .hero button:hover {
+        background-color: var(--secondary-color);
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* ===== CARD LAYOUTS ===== */
+    .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-lg);
+    }
+
+    .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-lg);
+    }
+
+    .grid-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--space-lg);
+    }
+
+    /* ===== EVENT CARDS ===== */
+    .event-card {
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .event-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    /* ===== DISCOVER PAGE ===== */
+    .attraction-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-lg);
+    }
+
+    /* ===== DIRECTORY PAGE ===== */
+    .directory-controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: var(--space-lg);
+    }
+
+    .directory-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-lg);
+    }
+
+    .directory-list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+
+    /* ===== FORM PAGE ===== */
+    .membership-form {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* ===== ENHANCED LAYOUTS ===== */
+    .hero-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+        padding: var(--space-xxl);
+        color: var(--text-light);
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem;
+        color: var(--text-light);
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .event-card,
+    .member-card {
+        animation: fadeIn 0.5s ease-out forwards;
+    }
+
+    /* ===== DIRECTORY GRID ===== */
+    .directory-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Weather Widget Styles */
+.current-weather {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.weather-main {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.weather-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.weather-temp {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.weather-details {
+    flex: 1;
+}
+
+.weather-condition {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.forecast-days {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.forecast-day {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.forecast-weekday {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.forecast-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.forecast-temp {
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.weather-refresh {
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    cursor: pointer;
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+
+.weather-error {
+    color: #dc3545;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .forecast-days {
+        grid-template-columns: 1fr;
+    }
+    
+    .current-weather {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Directory Grid */
+.directory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.member-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.member-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.member-content {
+  padding: 1.5rem;
+}
+
+.member-content h3 {
+  color: var(--accent2-color);
+  margin-bottom: 0.5rem;
+}
+
+.membership-level {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: var(--secondary-color);
+  color: white;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.member-content p {
+  margin-bottom: 0.75rem;
+  color: var(--text-color);
+}
+
+.member-content a {
+  display: inline-block;
+  color: var(--accent1-color);
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Membership level colors */
+.gold { background: #FFD700; color: #333; }
+.silver { background: #C0C0C0; color: #333; }
+.bronze { background: #CD7F32; color: white; }
+.np { background: #6c757d; color: white; }

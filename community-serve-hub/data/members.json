@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Porto Food Bank",
+        "address": "Rua do Campo Alegre 123, 4150-180 Porto, Portugal",
+        "phone": "+351 22 123 4567",
+        "website": "https://portofoodbank.example.com",
+        "image": "food-bank.webp",
+        "membershipLevel": "Gold",
+        "description": "Collecting and distributing food to those in need across Porto since 2010."
+    },
+    {
+        "name": "Douro River Cleanup Initiative",
+        "address": "Avenida da Boavista 456, 4100-139 Porto, Portugal",
+        "phone": "+351 22 234 5678",
+        "website": "https://douroriverclean.example.com",
+        "image": "rivercleanup.webp",
+        "membershipLevel": "Silver",
+        "description": "Organizing monthly cleanups along the Douro River banks."
+    },
+    {
+        "name": "Porto Senior Companions",
+        "address": "Rua de Santa Catarina 789, 4000-447 Porto, Portugal",
+        "phone": "+351 22 345 6789",
+        "website": "https://portoseniors.example.com",
+        "image": "senior-companion.webp",
+        "membershipLevel": "Non-Profit",
+        "description": "Connecting volunteers with isolated elderly residents."
+    },
+    {
+        "name": "Porto Youth Mentorship",
+        "address": "Praça da Liberdade 321, 4000-322 Porto, Portugal",
+        "phone": "+351 22 456 7890",
+        "website": "https://portoyouth.example.com",
+        "image": "youth.webp",
+        "membershipLevel": "Bronze",
+        "description": "Matching professionals with at-risk youth for career guidance."
+    },
+    {
+        "name": "Porto Animal Rescue",
+        "address": "Rua do Almada 654, 4050-037 Porto, Portugal",
+        "phone": "+351 22 567 8901",
+        "website": "https://portoanimalrescue.example.com",
+        "image": "animalrescue.webp",
+        "membershipLevel": "Silver",
+        "description": "Rescuing and rehabilitating abandoned pets in Porto."
+    },
+    {
+        "name": "Porto Cultural Volunteers",
+        "address": "Rua das Flores 987, 4050-263 Porto, Portugal",
+        "phone": "+351 22 678 9012",
+        "website": "https://portoculture.example.com",
+        "image": "cultural.webp",
+        "membershipLevel": "Gold",
+        "description": "Supporting cultural events and heritage preservation."
+    }
+]

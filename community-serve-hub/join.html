@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Our Community | Community Serve Hub</title>
+    <meta name="description" content="Become a member of Community Serve Hub">
+    <meta name="author" content="Your Name">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-grid">
+            <img src="images/logo.svg" alt="Community Serve Hub Logo" width="100">
+            <div>
+                <h1>Community Serve Hub</h1>
+                <p class="tagline">Join Our Growing Community</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <button id="menu-button" aria-expanded="false">☰</button>
+        <ul id="primary-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li class="active"><a href="join.html">Join Us</a></li>
+        </ul>
+    </nav>
+
+    <main class="form-main">
+        <h1>Become a Member</h1>
+        <form method="get" action="thankyou.html" class="membership-form">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <div class="form-group">
+                    <label for="first-name">First Name*</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name*</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="title">Title or Position</label>
+                    <input type="text" id="title" name="title" pattern="[A-Za-z -]{7,}">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="organization">Organization Name*</label>
+                    <input type="text" id="organization" name="organization" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Membership Level</legend>
+                <div class="membership-levels">
+                    <div class="membership-option np">
+                        <input type="radio" id="np" name="membership" value="np" required>
+                        <label for="np">
+                            <strong>Non-Profit</strong> (Free)
+                            <span class="benefits">Directory listing, basic access</span>
+                        </label>
+                    </div>
+                    <div class="membership-option bronze">
+                        <input type="radio" id="bronze" name="membership" value="bronze">
+                        <label for="bronze">
+                            <strong>Bronze</strong> ($50/year)
+                            <span class="benefits">Enhanced listing, event promotion</span>
+                        </label>
+                    </div>
+                    <div class="membership-option silver">
+                        <input type="radio" id="silver" name="membership" value="silver">
+                        <label for="silver">
+                            <strong>Silver</strong> ($100/year)
+                            <span class="benefits">Priority placement, social media features</span>
+                        </label>
+                    </div>
+                    <div class="membership-option gold">
+                        <input type="radio" id="gold" name="membership" value="gold">
+                        <label for="gold">
+                            <strong>Gold</strong> ($200/year)
+                            <span class="benefits">Premium placement, dedicated support</span>
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Organization Information</legend>
+                <div class="form-group">
+                    <label for="description">Organization Description</label>
+                    <textarea id="description" name="description" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="website">Website URL</label>
+                    <input type="url" id="website" name="website" placeholder="https://">
+                </div>
+            </fieldset>
+
+            <input type="hidden" id="timestamp" name="timestamp">
+
+            <div class="form-actions">
+                <button type="submit" class="submit-btn">Submit Application</button>
+                <button type="reset" class="reset-btn">Reset Form</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <p>info@communityservehub.org</p>
+                <p>(555) 123-4567</p>
+            </div>
+            <div class="social">
+                <a href="#"><img src="images/facebook.webp" alt="Facebook" width="32"></a>
+                <a href="#"><img src="images/twitter.webp" alt="Twitter" width="32"></a>
+                <a href="#"><img src="images/instagram.webp" alt="Instagram" width="32"></a>
+            </div>
+            <div class="legal">
+                <p>&copy; <span id="currentyear"></span> Community Serve Hub</p>
+                <p id="lastModified"></p>
+                <p>WDD 230 Project</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/responsive-menu.js"></script>
+    <script src="scripts/getdates.js"></script>
+    <script src="scripts/join.js"></script>
+</body>
+</html>

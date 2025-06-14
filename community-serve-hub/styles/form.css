@@ -1,0 +1,117 @@
+/* ===== FORM STYLES ===== */
+.form-main {
+    max-width: 800px;
+    margin: var(--space-xl) auto;
+    padding: 0 var(--space-md);
+}
+
+.membership-form {
+    background-color: white;
+    padding: var(--space-xl);
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.membership-form fieldset {
+    border: 1px solid var(--gray-light);
+    border-radius: 6px;
+    margin-bottom: var(--space-lg);
+    padding: var(--space-lg);
+}
+
+.membership-form legend {
+    color: var(--accent2-color);
+    font-weight: bold;
+    padding: 0 var(--space-md);
+    font-size: 1.25rem;
+}
+
+.membership-form label {
+    display: block;
+    margin-bottom: var(--space-md);
+    font-weight: 600;
+    color: var(--accent2-color);
+}
+
+.membership-form input[type="text"],
+.membership-form input[type="email"],
+.membership-form input[type="tel"],
+.membership-form input[type="url"],
+.membership-form textarea,
+.membership-form select {
+    width: 100%;
+    padding: var(--space-sm);
+    border: 1px solid var(--gray-light);
+    border-radius: 4px;
+    margin-top: var(--space-xs);
+    font-family: var(--paragraph-font);
+}
+
+.membership-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.membership-form input:required,
+.membership-form textarea:required {
+    border-left: 3px solid var(--accent1-color);
+}
+
+.membership-form input:focus,
+.membership-form textarea:focus,
+.membership-form select:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(87, 197, 182, 0.2);
+}
+
+.membership-form button[type="submit"] {
+    background-color: var(--accent1-color);
+    color: white;
+    border: none;
+    padding: var(--space-md) var(--space-lg);
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: var(--space-md);
+}
+
+.membership-form button[type="submit"]:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Radio button styles */
+.membership-levels {
+    display: grid;
+    gap: var(--space-md);
+}
+
+.membership-levels label {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.membership-levels label:hover {
+    background-color: var(--gray-light);
+}
+
+.membership-levels input[type="radio"] {
+    margin: 0;
+    width: auto;
+}
+
+/* Membership level indicators */
+.membership-levels .np { border-left: 4px solid #6c757d; }
+.membership-levels .bronze { border-left: 4px solid #cd7f32; }
+.membership-levels .silver { border-left: 4px solid #c0c0c0; }
+.membership-levels .gold { border-left: 4px solid #ffd700; }

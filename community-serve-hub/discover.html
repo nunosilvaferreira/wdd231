@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Our Community | Community Serve Hub</title>
+    <meta name="description" content="Discover local attractions and community statistics">
+    <meta name="author" content="Nuno Silva Ferreira">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-grid">
+            <img src="images/logo.svg" alt="Community Serve Hub Logo" width="100">
+            <div>
+                <h1>Community Serve Hub</h1>
+                <p class="tagline">Discover Our Vibrant Community</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <button id="menu-button" aria-expanded="false">☰</button>
+        <ul id="primary-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join Us</a></li>
+        </ul>
+    </nav>
+
+    <main class="discover-main">
+        <section class="demographics">
+            <h2>Community Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Population</h3>
+                    <p class="stat-number">45,892</p>
+                    <p class="stat-change">↑ 3.2% since 2020</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Median Age</h3>
+                    <p class="stat-number">34.5</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Volunteers</h3>
+                    <p class="stat-number">6,210</p>
+                    <p class="stat-change">↑ 12% since 2020</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="attractions">
+            <h2>Local Attractions</h2>
+            <div class="attraction-gallery">
+                <figure>
+                    <img src="images/placeholder.jpg" data-src="images/park.jpg" alt="Community Park" width="400" height="300" loading="lazy">
+                    <figcaption>Central Community Park</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/placeholder.jpg" data-src="images/museum.jpg" alt="Local Museum" width="400" height="300" loading="lazy">
+                    <figcaption>Heritage Museum</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/placeholder.jpg" data-src="images/riverfront.jpg" alt="Riverfront" width="400" height="300" loading="lazy">
+                    <figcaption>Riverfront Walkway</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/placeholder.jpg" data-src="images/market.jpg" alt="Farmers Market" width="400" height="300" loading="lazy">
+                    <figcaption>Farmers Market</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/placeholder.jpg" data-src="images/library.jpg" alt="Public Library" width="400" height="300" loading="lazy">
+                    <figcaption>Public Library</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="visit-info">
+            <h2>Visit Information</h2>
+            <div class="visit-message">
+                <p>Welcome to our community! You've visited this page <span id="visit-count">0</span> times.</p>
+                <p id="last-visit">This is your first visit!</p>
+            </div>
+            <div class="calendar">
+                <h3>Upcoming Community Events</h3>
+                <ul class="event-list">
+                    <li><strong>Dec 15:</strong> Holiday Food Drive</li>
+                    <li><strong>Jan 10:</strong> New Year Park Cleanup</li>
+                    <li><strong>Feb 14:</strong> Valentine's Senior Visits</li>
+                    <li><strong>Mar 22:</strong> Spring Community Festival</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <p>info@communityservehub.org</p>
+                <p>(555) 123-4567</p>
+            </div>
+            <div class="social">
+                <a href="#"><img src="images/facebook.webp" alt="Facebook" width="32"></a>
+                <a href="#"><img src="images/twitter.webp" alt="Twitter" width="32"></a>
+                <a href="#"><img src="images/instagram.webp" alt="Instagram" width="32"></a>
+            </div>
+            <div class="legal">
+                <p>&copy; <span id="currentyear"></span> Community Serve Hub</p>
+                <p id="lastModified"></p>
+                <p>WDD 230 Project</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/responsive-menu.js"></script>
+    <script src="scripts/getdates.js"></script>
+    <script src="scripts/discover.js"></script>
+</body>
+</html>

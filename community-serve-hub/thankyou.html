@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community Serve Hub | Home</title>
-    <meta name="description" content="Connecting volunteers with local service opportunities in your community">
+    <title>Thank You | Community Serve Hub</title>
+    <meta name="description" content="Thank you for joining our community">
+    <meta name="author" content="Nuno Silva Ferreira">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -15,56 +16,38 @@
 <body>
     <header>
         <div class="header-grid">
-            <img src="images/logo.svg" alt="Community Serve Hub Logo" width="100">
+            <img src="images/logo.png" alt="Community Serve Hub Logo" width="100">
             <div>
                 <h1>Community Serve Hub</h1>
-                <p class="tagline">Connecting Hearts Through Service</p>
+                <p class="tagline">Thank You for Joining!</p>
             </div>
         </div>
     </header>
-    
+
     <nav>
         <button id="menu-button" aria-expanded="false">☰</button>
         <ul id="primary-nav">
-            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="discover.html">Discover</a></li>
             <li><a href="directory.html">Directory</a></li>
             <li><a href="join.html">Join Us</a></li>
         </ul>
     </nav>
-    
-    <main>
-        <section class="hero">
-            <picture>
-                <source media="(max-width: 600px)" srcset="images/hero-small.webp">
-                <source media="(max-width: 1200px)" srcset="images/hero-medium.webp">
-                <img src="images/hero-desktop.jpg" alt="People volunteering together" width="1200" height="400">
-            </picture>
-            <button onclick="location.href='join.html'">Join Our Community</button>
-        </section>
-        
-        <section class="current-events">
-            <h2>Upcoming Events</h2>
-            <div class="events-grid" id="events-container">
-                <!-- Filled by JavaScript -->
+
+    <main class="thankyou-main">
+        <section class="confirmation">
+            <h2>Application Received!</h2>
+            <div class="confirmation-details">
+                <p>Thank you for joining Community Serve Hub. We've received your application and will process it within 2 business days.</p>
+                <p>A confirmation email has been sent to <span id="user-email"></span>.</p>
+                <div id="membership-benefits">
+                    <!-- Filled by JavaScript -->
+                </div>
             </div>
-        </section>
-        
-        <section class="weather-card">
-            <h2>Local Weather</h2>
-            <div id="weather-container">
-                <!-- Filled by JavaScript -->
-            </div>
-        </section>
-        
-        <section class="spotlight">
-            <h2>Member Spotlight</h2>
-            <div class="spotlight-grid" id="spotlight-container">
-                <!-- Filled by JavaScript -->
-            </div>
+            <a href="index.html" class="return-home">Return to Homepage</a>
         </section>
     </main>
-    
+
     <footer>
         <div class="footer-grid">
             <div class="contact">
@@ -84,10 +67,9 @@
             </div>
         </div>
     </footer>
-    
+
     <script src="scripts/responsive-menu.js"></script>
     <script src="scripts/getdates.js"></script>
-    <script src="scripts/weather.js"></script>
-    <script src="scripts/directory.js"></script>
+    <script src="scripts/thankyou.js"></script>
 </body>
 </html>
