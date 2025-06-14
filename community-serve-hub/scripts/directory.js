@@ -1,54 +1,60 @@
 document.addEventListener('DOMContentLoaded', async function() {
+    const directoryContainer = document.getElementById('directory-container');
+    directoryContainer.innerHTML = '<div class="loading">Loading members...</div>';
+
     try {
-        // Load member data with absolute URL
-        const response = await fetch('https://nunosilvaferreira.github.io/wdd231/community-serve-hub/data/members.json');
+        // Solution 1: Relative path from the HTML file's location
+        const response = await fetch('./data/members.json');
         
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
+        // Fallback Solution: Absolute path if relative fails
+        // const response = await fetch('https://nunosilvaferreira.github.io/wdd231/community-serve-hub/data/members.json');
+        
+        if (!response.ok) throw new Error(`Server responded with ${response.status}`);
         
         const members = await response.json();
-        const directoryContainer = document.getElementById('directory-container');
         
-        // Display loading state
-        directoryContainer.innerHTML = '<div class="loading">Loading members...</div>';
+        if (!Array.isArray(members)) throw new Error('Invalid data format');
         
-        if (members && members.length > 0) {
-            displayMembers(members, directoryContainer);
-        } else {
-            throw new Error('No member data found');
-        }
+        renderMembers(members, directoryContainer);
         
     } catch (error) {
-        console.error('Error loading directory:', error);
-        document.getElementById('directory-container').innerHTML = `
-            <div class="error">
-                <p>Unable to load member directory. Please try again later.</p>
-                <p><small>${error.message}</small></p>
-            </div>
-        `;
+        console.error('Failed to load directory:', error);
+        showError(directoryContainer, error);
     }
 });
 
-function displayMembers(members, container) {
+function renderMembers(members, container) {
     container.innerHTML = members.map(member => `
         <div class="member-card">
-            <img src="https://nunosilvaferreira.github.io/wdd231/community-serve-hub/images/${member.image}" 
-                 alt="${member.name}" 
+            <img src="./images/${member.image}" 
+                 alt="${member.name}"
                  loading="lazy"
                  width="400"
                  height="300"
-                 onerror="this.src='https://nunosilvaferreira.github.io/wdd231/community-serve-hub/images/placeholder.jpg'">
+                 onerror="this.onerror=null;this.src='./images/placeholder.jpg'">
             <div class="member-content">
                 <h3>${member.name}</h3>
-                <span class="membership-level ${member.membershipLevel.toLowerCase().replace(/\s+/g, '-')}">
+                <span class="membership-badge ${member.membershipLevel.toLowerCase()}">
                     ${member.membershipLevel}
                 </span>
-                <p>${member.address}</p>
-                <p>${member.phone}</p>
-                <a href="${member.website}" target="_blank" rel="noopener">Visit Website</a>
+                <p><i class="fas fa-map-marker-alt"></i> ${member.address}</p>
+                <p><i class="fas fa-phone"></i> ${member.phone}</p>
+                <a href="${member.website}" target="_blank" rel="noopener">
+                    <i class="fas fa-external-link-alt"></i> Visit Website
+                </a>
                 <p class="description">${member.description}</p>
             </div>
         </div>
     `).join('');
+}
+
+function showError(container, error) {
+    container.innerHTML = `
+        <div class="alert alert-error">
+            <h3>Directory Unavailable</h3>
+            <p>We couldn't load the member directory. Please try again later.</p>
+            ${error.message ? `<p><small>Technical details: ${error.message}</small></p>` : ''}
+            <button onclick="window.location.reload()">Retry</button>
+        </div>
+    `;
 }
