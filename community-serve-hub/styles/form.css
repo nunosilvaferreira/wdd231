@@ -199,3 +199,11 @@
         padding: 0.5rem;
     }
 }
+.video-link img {
+    transition: all 0.3s ease;
+}
+
+.video-link:hover img {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    border-color: var(--accent1-color);
+}

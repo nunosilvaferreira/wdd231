@@ -238,3 +238,12 @@ footer {
 .membership-badge.silver { background: #C0C0C0; color: #333; }
 .membership-badge.bronze { background: #CD7F32; color: white; }
 .membership-badge.non-profit { background: #6c757d; color: white; }
+
+.video-link img {
+    transition: all 0.3s ease;
+}
+
+.video-link:hover img {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    border-color: var(--accent1-color);
+}

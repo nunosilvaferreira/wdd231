@@ -382,3 +382,43 @@
 .view-toggle button:hover:not(.active) {
     background: rgba(87, 197, 182, 0.1);
 }
+
+/* Footer Video Link Styles */
+.video-link {
+    text-align: center;
+}
+
+.video-link a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.video-link a:hover {
+    transform: scale(1.03);
+}
+
+.video-link img {
+    width: 160px;
+    border-radius: 8px;
+    border: 2px solid var(--secondary-color);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.video-link span {
+    display: block;
+    margin-top: 0.5rem;
+    color: var(--accent1-color);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .video-link {
+        grid-column: 1 / -1;
+        margin-top: 1.5rem;
+    }
+    
+    .video-link img {
+        width: 140px;
+    }
+}
