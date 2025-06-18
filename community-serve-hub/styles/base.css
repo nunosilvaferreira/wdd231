@@ -250,3 +250,29 @@ footer {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   border-color: var(--accent1-color);
 }
+
+body, html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.container {
+  max-width: 100%;
+  padding: 0 15px;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Grid/Flex */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  overflow: hidden;
+}
+
+
