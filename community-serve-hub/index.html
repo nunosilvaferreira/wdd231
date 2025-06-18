@@ -1,103 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community Serve Hub | Home</title>
-    <meta name="description" content="Connecting volunteers with local service opportunities in your community">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community Serve Hub | Home</title>
+  <meta name="description" content="Connecting volunteers with local service opportunities in your community" />
+  <meta name="theme-color" content="#0055a5" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+
+  <!-- Font optimization -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Preload hero image for performance -->
+  <link rel="preload" as="image" href="images/hero-desktop.jpg" />
 </head>
 <body>
-    <header>
-        <div class="header-grid">
-            <img src="images/logo.svg" alt="Community Serve Hub Logo" width="100">
-            <div>
-                <h1>Community Serve Hub</h1>
-                <p class="tagline">Connecting Hearts Through Service</p>
-            </div>
-        </div>
-    </header>
-    
-    <nav>
-        <button id="menu-button" aria-expanded="false">☰</button>
-        <ul id="primary-nav">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="discover.html">Discover</a></li>
-            <li><a href="directory.html">Directory</a></li>
-            <li><a href="join.html">Join Us</a></li>
-        </ul>
-    </nav>
-    
-    <main>
-        <section class="hero">
-            <picture>
-                <source media="(max-width: 600px)" srcset="images/hero-small.webp">
-                <source media="(max-width: 1200px)" srcset="images/hero-medium.webp">
-                <img src="images/hero-desktop.jpg" alt="People volunteering together" width="1200" height="400">
-            </picture>
-            <button onclick="location.href='join.html'">Join Our Community</button>
-        </section>
-        
-        <section class="current-events">
-            <h2>Upcoming Events</h2>
-            <div class="events-grid" id="events-container">
-                <!-- Filled by JavaScript -->
-            </div>
-        </section>
-        
-        <section class="weather-card">
-            <h2>Local Weather</h2>
-            <div id="weather-container">
-                <!-- Filled by JavaScript -->
-            </div>
-        </section>
-        
-        <section class="spotlight">
-            <h2>Member Spotlight</h2>
-            <div class="spotlight-grid" id="spotlight-container">
-                <!-- Filled by JavaScript -->
-            </div>
-        </section>
-    </main>
-    
-    <footer>
+  <header>
+    <div class="header-grid">
+      <img src="images/logo.svg" alt="Community Serve Hub Logo" width="100" height="100" />
+      <div>
+        <h1>Community Serve Hub</h1>
+        <p class="tagline">Connecting Hearts Through Service</p>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <button id="menu-button" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">☰</button>
+    <ul id="primary-nav">
+      <li class="active"><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="discover.html">Discover</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="join.html">Join Us</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero" aria-label="Hero section">
+      <picture>
+        <source media="(max-width: 600px)" srcset="images/hero-small.jpg" />
+        <source media="(max-width: 1200px)" srcset="images/hero-medium.webp" />
+        <img src="images/hero-desktop.jpg" alt="People volunteering together" width="1200" height="400" loading="lazy" />
+      </picture>
+      <button onclick="location.href='join.html'" aria-label="Join our community">Join Our Community</button>
+    </section>
+
+    <section class="current-events" aria-labelledby="events-title">
+      <h2 id="events-title">Upcoming Events</h2>
+      <div class="events-grid" id="events-container" aria-live="polite">
+        <!-- JavaScript content -->
+      </div>
+    </section>
+
+    <section class="weather-card" aria-labelledby="weather-title">
+      <h2 id="weather-title">Local Weather</h2>
+      <div id="weather-container" aria-live="polite">
+        <!-- JavaScript content -->
+      </div>
+    </section>
+
+    <section class="spotlight" aria-labelledby="spotlight-title">
+      <h2 id="spotlight-title">Member Spotlight</h2>
+      <div class="spotlight-grid" id="spotlight-container" aria-live="polite">
+        <!-- JavaScript content -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
     <div class="footer-grid">
-        <div class="contact">
-            <h3>Contact Us</h3>
-            <p>info@communityservehub.org</p>
-            <p>(555) 123-4567</p>
-        </div>
-        
-        <div class="footer-links">
-            <h3>Quick Links</h3>
-            <a href="video.html">Project Video</a>
-            <a href="join.html">Become a Member</a>
-            <a href="directory.html">View Directory</a>
-        </div>
-        
-        <div class="video-link">
-            <h3>Project Demo</h3>
-            <a href="https://youtu.be/Lm4jDjx_7kQ" target="_blank" rel="noopener">
-                <img src="images/video-thumbnail.jpg" alt="Watch Project Video" width="160">
-                <span>Watch Video Tour</span>
-            </a>
-        </div>
+      <div class="contact">
+        <h3>Contact Us</h3>
+        <p><a href="mailto:info@communityservehub.org">info@communityservehub.org</a></p>
+        <p><a href="tel:+351919999999">(+351) 919 999 999</a></p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <a href="video.html">Project Video</a>
+        <a href="join.html">Become a Member</a>
+        <a href="directory.html">View Directory</a>
+      </div>
+
+      <div class="video-link">
+        <h3>Project Demo</h3>
+        <a href="https://youtu.be/Lm4jDjx_7kQ" target="_blank" rel="noopener">
+          <img src="images/video-thumbnail.jpg" alt="Watch our project video tour" width="160" height="90" loading="lazy" />
+          <span>Watch Video Tour</span>
+        </a>
+      </div>
     </div>
-    
+
     <div class="copyright">
-        <p>&copy; <span id="currentyear"></span> Community Serve Hub</p>
-        <p id="lastModified"></p>
+      <p>&copy; <span id="currentyear"></span> Community Serve Hub <br><a href="https://nunosilvaferreira.github.io/wdd231/">Nuno Ferreira</a> | All rights reserved.</p>
+      <p id="lastModified"></p>
     </div>
-    </footer>
-    
-    <script src="scripts/responsive-menu.js"></script>
-    <script src="scripts/getdates.js"></script>
-    <script src="scripts/weather.js"></script>
-    <script src="scripts/directory.js"></script>
+  </footer>
+
+  <!-- JavaScript (defer for performance) -->
+  <script src="scripts/responsive-menu.js" defer></script>
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/weather.js" defer></script>
+  <script src="scripts/directory.js" defer></script>
 </body>
 </html>
