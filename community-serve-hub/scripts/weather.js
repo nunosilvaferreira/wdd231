@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (!container) return;
 
   try {
-    const city = 'Lisbon';
+    const city = 'Porto';
     const apiKey = '1834b7a63814025e62dc4e99f014ef3d'; 
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 
