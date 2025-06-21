@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuno Ferreira - Portfolio</title>
+    <link rel="stylesheet" href="styles/portfolio.css">
+</head>
+<body>
+    <header>
+        <h1>My Projects</h1>
+        <p>A collection of my work and learning journey</p>
+    </header>
+
+    <main>
+        <section class="projects-grid">
+            <article class="project-card">
+                <h2>WDD131 Course Projects</h2>
+                <img src="images/project1.jpg" alt="Course Projects">
+                <p>Collection of projects completed as part of the WDD131 course, demonstrating progressive skill development.</p>
+                <a href="https://nunosilvaferreira.github.io/wdd131/" class="btn">View Projects</a>
+            </article>
+
+            <article class="project-card">
+                <h2>Code Library</h2>
+                <img src="images/project2.jpg" alt="Code Library">
+                <p>A personal code library with reusable components and snippets.</p>
+                <a href="https://nunosilvaferreira.github.io/wdd131/code-library/index.html" class="btn">Visit Library</a>
+            </article>
+
+            <article class="project-card">
+                <h2>Personal CV Website</h2>
+                <img src="images/project3.jpg" alt="CV Website">
+                <p>Interactive CV with multilingual support.</p>
+                <a href="cv.html" class="btn">View CV</a>
+            </article>
+
+            <!-- Add more project cards as needed -->
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="currentYear"></span> | Nuno Ferreira | Portugal</p>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
