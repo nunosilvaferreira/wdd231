@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
         { code: "CSE 111", name: "Programming With Functions", credits: 3, completed: true },
         { code: "CSE 210", name: "Programming With Classes", credits: 3, completed: true },
         { code: "WDD 130", name: "Web Fundamentals", credits: 3, completed: true },
-        { code: "WDD 131", name: "Dynamic Web Fundamentals", credits: 3, completed: false },
-        { code: "WDD 231", name: "Web Frontend Development I", credits: 3, completed: false }
+        { code: "WDD 131", name: "Dynamic Web Fundamentals", credits: 3, completed: true },
+        { code: "WDD 231", name: "Web Frontend Development I", credits: 3, completed: true }
     ];
 
     const courseCardsContainer = document.getElementById('course-cards');
