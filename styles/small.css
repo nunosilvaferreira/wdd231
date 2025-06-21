@@ -196,3 +196,7 @@ section p {
     margin-left: auto;
     margin-right: auto;
 }
+
+.contact {
+    text-align: left;
+}
